@@ -14,7 +14,8 @@ const toCache = [
     '/gambar/paralayang.jpg',
     '/gambar/prabu.jpg',
     '/contact.html',
-    '/wisata.html'
+    '/wisata.html',
+    '/manifest.json',
 ];
 
 self.addEventListener('install', function(event) {
@@ -42,7 +43,7 @@ self.addEventListener('activate', function(event){
     event.waitUntil(
         caches.keys().then(function(cacheNames){
             return Promise.all(
-                cacheNames.filter(function(cacheNames){
+                cacheNames.filter(function(cacheName){
                     return cacheName != CACHE_NAME
                 }).map(function(cacheName){
                     return caches.delete(cacheName)
