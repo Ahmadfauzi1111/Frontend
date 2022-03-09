@@ -12,6 +12,12 @@ body{
     min-height: 1000px;
 }
 
+.add-button {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+
 p{
     font-weight: 300;
     color: #111;
@@ -327,13 +333,14 @@ section{
         position: relative;
         width: 40px;
         height: 40px;
+        background: url("../gambar/bars.png");
         background-size: 30px;
         background-repeat: no-repeat;
         cursor: pointer;
     }
 
     .menuToggle.active{
-        background: url(images/close.png);
+        background: url("../gambar/close.png");
         background-size: 40px;
         background-repeat: no-repeat;
         background-position: center;
