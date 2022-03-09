@@ -26,7 +26,7 @@ const toCache = [
     '/contact.html',
     '/wisata.html',
     '/index.html',
-    '/manifest.json',
+    '/web.webmanifest',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css',
     'https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap'
 ];
