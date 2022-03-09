@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="web.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ios support -->
     <link rel="apple-touch-icon" href="gambar/icon-96x96.png">
@@ -103,37 +103,6 @@
         </div> -->
     </section>
 
-    <script>
-        let deferredPrompt;
-        const addBtn = document.querySelector('.add-button');
-        addBtn.style.display = 'none';
-    </script>
-    <script>
-        window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e;
-        // Update UI to notify the user they can add to home screen
-        addBtn.style.display = 'block';
-
-        addBtn.addEventListener('click', (e) => {
-            // hide our user interface that shows our A2HS button
-            addBtn.style.display = 'none';
-            // Show the prompt
-            deferredPrompt.prompt();
-            // Wait for the user to respond to the prompt
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the A2HS prompt');
-                } else {
-                console.log('User dismissed the A2HS prompt');
-                }
-                deferredPrompt = null;
-            });
-        });
-        });
-    </script>
     <script type="text/javascript">
         window.addEventListener("scroll", () => {
             const header = document.querySelector("header");
